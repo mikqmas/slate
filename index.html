@@ -1,0 +1,1857 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="ruby">ruby</a>
+              <a href="#" data-language-name="python">python</a>
+              <a href="#" data-language-name="javascript">javascript</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="INTRODUCTION">INTRODUCTION</a>
+          </li>
+          <li>
+            <a href="#sandbox-vs-production" class="toc-h1 toc-link" data-title="Sandbox vs Production">Sandbox vs Production</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#token-type" class="toc-h2 toc-link" data-title="Token Type">Token Type</a>
+                  </li>
+                  <li>
+                    <a href="#permissions" class="toc-h2 toc-link" data-title="Permissions">Permissions</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#oauth-2-0" class="toc-h1 toc-link" data-title="OAuth 2.0">OAuth 2.0</a>
+          </li>
+          <li>
+            <a href="#using-api-token" class="toc-h1 toc-link" data-title="Using API Token">Using API Token</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#rate-limit" class="toc-h2 toc-link" data-title="Rate Limit">Rate Limit</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#manipulating-api-requests" class="toc-h1 toc-link" data-title="Manipulating API Requests">Manipulating API Requests</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#expanding-objects" class="toc-h2 toc-link" data-title="Expanding Objects">Expanding Objects</a>
+                  </li>
+                  <li>
+                    <a href="#sorting" class="toc-h2 toc-link" data-title="Sorting">Sorting</a>
+                  </li>
+                  <li>
+                    <a href="#filtering" class="toc-h2 toc-link" data-title="Filtering">Filtering</a>
+                  </li>
+                  <li>
+                    <a href="#pagination-limit" class="toc-h2 toc-link" data-title="Pagination/Limit">Pagination/Limit</a>
+                  </li>
+                  <li>
+                    <a href="#displaying-null-field" class="toc-h2 toc-link" data-title="Displaying Null Field">Displaying Null Field</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#429-rate-limit" class="toc-h2 toc-link" data-title="429 - Rate Limit">429 - Rate Limit</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-reference" class="toc-h1 toc-link" data-title="API REFERENCE">API REFERENCE</a>
+          </li>
+          <li>
+            <a href="#orders" class="toc-h1 toc-link" data-title="Orders">Orders</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-orders" class="toc-h2 toc-link" data-title="Get All Orders">Get All Orders</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-order" class="toc-h2 toc-link" data-title="Get a Specific Order">Get a Specific Order</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-order" class="toc-h2 toc-link" data-title="Delete a Specific Order">Delete a Specific Order</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#payments" class="toc-h1 toc-link" data-title="Payments">Payments</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-payments" class="toc-h2 toc-link" data-title="Get All Payments">Get All Payments</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-payment" class="toc-h2 toc-link" data-title="Get a Specific Payment">Get a Specific Payment</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-payment" class="toc-h2 toc-link" data-title="Delete a Specific Payment">Delete a Specific Payment</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#merchants" class="toc-h1 toc-link" data-title="Merchants">Merchants</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-merchants" class="toc-h2 toc-link" data-title="Get All Merchants">Get All Merchants</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-merchant" class="toc-h2 toc-link" data-title="Get a Specific Merchant">Get a Specific Merchant</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-merchant" class="toc-h2 toc-link" data-title="Delete a Specific Merchant">Delete a Specific Merchant</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#inventory" class="toc-h1 toc-link" data-title="Inventory">Inventory</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-inventories" class="toc-h2 toc-link" data-title="Get All Inventories">Get All Inventories</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-inventory" class="toc-h2 toc-link" data-title="Get a Specific Inventory">Get a Specific Inventory</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-inventory" class="toc-h2 toc-link" data-title="Delete a Specific Inventory">Delete a Specific Inventory</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#employees" class="toc-h1 toc-link" data-title="Employees">Employees</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-employees" class="toc-h2 toc-link" data-title="Get All Employees">Get All Employees</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-employee" class="toc-h2 toc-link" data-title="Get a Specific Employee">Get a Specific Employee</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-employee" class="toc-h2 toc-link" data-title="Delete a Specific Employee">Delete a Specific Employee</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#customers" class="toc-h1 toc-link" data-title="Customers">Customers</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-customers" class="toc-h2 toc-link" data-title="Get All Customers">Get All Customers</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-customer" class="toc-h2 toc-link" data-title="Get a Specific Customer">Get a Specific Customer</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-customer" class="toc-h2 toc-link" data-title="Delete a Specific Customer">Delete a Specific Customer</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#cash" class="toc-h1 toc-link" data-title="Cash">Cash</a>
+          </li>
+          <li>
+            <a href="#apps" class="toc-h1 toc-link" data-title="Apps">Apps</a>
+          </li>
+          <li>
+            <a href="#notifications" class="toc-h1 toc-link" data-title="Notifications">Notifications</a>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>INTRODUCTION</h1>
+<p>Welcome to the Clover API! You can use our API to get access to merchant data like orders, payments, employees, customer, etc.</p>
+
+<p>We have language bindings in Shell, Ruby, Python, and JS! Our docs are generated through Swagger, which you can use to create your own client libraries for the language of your choice.</p>
+<h1 id='sandbox-vs-production'>Sandbox vs Production</h1>
+<p>Clover provides a REST API for each of its supported markets.
+United States: https://api.clover.com
+Europe: https://api.eu.clover.com</p>
+
+<p>For development and testing purpose, please use our sandbox environment:
+https://apisandbox.dev.clover.com</p>
+
+<p>Our documentation will always refer to sandbox environment.</p>
+<h1 id='authentication'>Authentication</h1>
+<blockquote>
+<p>To authorize, use this code:</p>
+</blockquote>
+<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">CloverPOS</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"api_endpoint_here"</span>
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>Make sure to replace <code>your_access_token</code> with your API key.</p>
+</blockquote>
+
+<p>Clover uses API keys to allow access to the API. You can register a new Clover API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+
+<p>Clover expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+
+<p><code>Authorization: your_access_token</code></p>
+
+<aside class="notice">
+You must replace <code>your_access_token</code> with your personal API key.
+</aside>
+<h2 id='token-type'>Token Type</h2>
+<p>There are three methods of generating an access token. 
+1. OAuth 2.0
+  - Generally accepted method of generating token.
+2. Merchant Generated Token
+  - Strictly for testing only. This will be limited in endpoints that will be available. It will also lack CORS support.
+3. Android SDK 
+  - For Android Apps to make REST calls, <code>CloverAuth.authenticate(context, mAccount).token</code>;</p>
+<h2 id='permissions'>Permissions</h2>
+<p>Your app will need to request specific (Read / Write) permissions from merchants on download from App Market.</p>
+<h1 id='oauth-2-0'>OAuth 2.0</h1>
+<p>OAuth 2.0
+While building your Clover app, you may want to access data about Clover merchants, such as their order history or current inventory. With Clover’s powerful REST APIs, your app can easily access data about merchants and their businesses.</p>
+
+<p>Considering the sensitivity of merchant data, we at Clover have implemented the OAuth 2.0 security framework. When a merchant selects and installs your app from the Clover App Market, we use OAuth 2.0 to first secure the communication between your app and the merchant, and then give your app the desired access to merchant data.</p>
+
+<p>In this article, we discuss:
+The Clover OAuth 2.0 Flow
+Step 1: Request Merchant Authorization
+Step 2: Receive an Authorization Code
+Step 3: Request an API Token
+Step 4: Receive an API Token
+Using the Response Type Token Method
+The Clover OAuth 2.0 Flow
+As shown in the figure below, there are 4 keys steps involved in the Clover OAuth 2.0 flow.</p>
+
+<p>OAuth 2.0</p>
+
+<p>To begin with, let’s define a few terms that can help us in discussing the OAuth 2.0 flow:</p>
+
+<p>Client ID
+This ID uniquely identifies your app on the Clover App Market. This public-facing ID confirms that your app is participating in the OAuth 2.0 flow.</p>
+
+<p>Client Secret
+This ID is a secret key that is assigned to your app by Clover. The client ID and client secret together authenticate the identity of your app with the Clover Server.</p>
+
+<p>Merchant
+Clover merchants can be either one of two states:</p>
+
+<p>An unauthorized Merchant wants access to your app, but has not logged in to their Clover merchant account. Your app redirects this merchant to log in to their merchant account.</p>
+
+<p>https://sandbox.dev.clover.com/oauth/authorize?client_id={App ID}
+An authorized Merchant has logged in to their Clover merchant account. The Clover Server redirects this merchant to your app.</p>
+
+<p>https://www.example.com/oauth_callback?merchant_id={Merchant ID}&amp;client_id={App ID}
+&amp;code={Authorization code}
+Authorization Code
+An authorized merchant is redirected to your app along with an authorization code. With this code, the Clover Server confirms that your request for merchant data has been authorized by the merchant.</p>
+
+<p>https://sandbox.dev.clover.com/oauth/token?client_id={App ID}&amp;client_secret={App secret}
+&amp;code={Authorization code}
+API Token
+Your app uses the authorization code, client ID, and client secret to negotiate with the Clover server for an API token. With the API token, your app can make REST API calls and access merchant data.</p>
+
+<p>{
+&quot;access_token&quot;:&quot;{API token}&quot;
+}
+Step 1: Request Merchant Authorization
+When an unauthorized merchant selects and installs your app from the Clover App Market, redirect this merchant using the following URL format to log in to their Clover merchant account:</p>
+
+<p>https://sandbox.dev.clover.com/oauth/authorize?client_id={App ID}&amp;redirect_uri={Client redirect URL}
+TIP
+If an unauthorized merchant navigates directly to your app URL without installing the app from the Clover App Market:</p>
+
+<p>Redirect this merchant to first log in to their Clover merchant account, and then
+Request the merchant to install your app from the Clover App Market
+Clover provides a wide range of parameters that you can use to customize the merchant authorization redirect URL as listed in the following table.</p>
+
+<p>Table 1: Parameters in the merchant authorization redirect URL</p>
+
+<p>Parameter   Description
+client_id</p>
+
+<p>This ID uniquely identifies your app on the Clover App Market.</p>
+
+<p>NOTE
+The client_id parameter value is the App ID value in your app’s Settings page on the Developer Dashboard.</p>
+
+<p>client_ids(Optional)</p>
+
+<p>If you are building an app for multiple Clover markets, your app receives a unique app ID for each Clover market. For such apps, set the client_ids parameter with a comma separated list of app IDs.</p>
+
+<p>merchant_id(Optional)</p>
+
+<p>This ID is assigned by Clover to uniquely identify a merchant account or business. App users can own multiple businesses and merchant accounts. If an app user has multiple merchant accounts, the user is requested to select the desired merchant account as part of the OAuth 2.0 flow.</p>
+
+<p>If you know the merchant account that the user will select, you can simply set the merchant_id parameter with the merchant ID of that account. This enables the user to skip the account selection step.</p>
+
+<p>redirect_uri(Optional)</p>
+
+<p>Once the merchant has logged in to their account, you can redirect them to a custom URL with the redirect_uri parameter.</p>
+
+<p>NOTE
+The value of the redirect_uri parameter must be a subpath of the Site URL value in your app’s Settings &gt; Web Configuration page.</p>
+
+<p>response_type(Optional)</p>
+
+<p>By default, the Clover Server responds to merchant authorization requests by redirecting the merchant to your app along with an authorization code. For your app on the Clover App Market, receiving the authorization code is an important step in the OAuth 2.0 flow.</p>
+
+<p>You can also build and publish client-based JavaScript and mobile apps on the Clover App Market. For such apps, if you set the value of the response_type parameter as token in the redirect URL, the Clover Server follows the Response Type Token method and directly sends you an API token along with redirecting the merchant to your app.</p>
+
+<p>WARNING
+When you use the Response Type Token method, the API token from the Clover Server is publicly accessible. We highly recommend that you use this method only for merchant-facing apps.</p>
+
+<p>state(Optional)</p>
+
+<p>To ensure that merchants are logging in to a legitimate redirect URL from your app, you can set the state parameter with any string value. In this case, if the Clover Server response also includes the same state parameter value, this ensures that:</p>
+
+<p>An legitimate request has been made by your app, and then
+The Clover Server has redirected the merchant to your app in response to the legitimate request
+Step 2: Receive an Authorization Code
+Once a merchant is authorized, the Clover Server redirects this merchant to your app using the Site URL value in your app’s Settings &gt; Web Configuration page.</p>
+
+<p>NOTE
+If you have set the redirect_uri parameter to a custom location as part of the merchant authorization redirect URL, the server then redirects the merchant to the specified location.</p>
+
+<p>The Clover Server redirects the merchant to your app along with a set of parameters in the following URL format, which includes an authorization code:</p>
+
+<p>https://www.example.com/oauth_callback?merchant_id={Merchant ID}&amp;client_id={App ID}
+&amp;employee_id={Employee ID}&amp;code={Authorization code}
+With the authorization code, the Clover Server confirms that your request for merchant data has been authorized by the merchant. You can use this code to further negotiate with the Clover Server for an API token.</p>
+
+<p>TIP
+Every time a merchant is redirected to your app, you can confirm whether the merchant has logged in to their Clover merchant account by checking for an authorization code in the redirect URL.</p>
+
+<p>The following table lists the parameters in the merchant redirect URL from the Clover Server to your app.</p>
+
+<p>Table 2: TParameters in the merchant redirect URL from the Clover Server</p>
+
+<p>Parameter   Description
+merchant_id</p>
+
+<p>This ID uniquely identifies the Clover merchant account that has been authorized to use your app.</p>
+
+<p>client_id</p>
+
+<p>This ID uniquely identifies your app on the Clover App Market. This parameter confirms that your app is participating in the OAuth 2.0 flow and that the code parameter value is for the specified client_id parameter value.</p>
+
+<p>code</p>
+
+<p>With this authorization code, the Clover Server confirms that your request for merchant data has been authorized by the merchant. You can use this code to further negotiate with the Clover Server for an API token.</p>
+
+<p>employee_id(Optional)</p>
+
+<p>This ID uniquely identifies the employee from the merchant roster that has logged in to their account. You can create custom rules in your app based on the employee.</p>
+
+<p>NOTE
+If a Clover customer support agent accesses your app on behalf of the merchant, the employee_id parameter is not part of the redirect URL.</p>
+
+<p>Step 3: Request an API Token
+At this stage of the OAuth 2.0 flow, you exchange your authorization code for an API token from the Clover Server. Send an API token request to the Clover Server in the following URL format:</p>
+
+<p>https://sandbox.dev.clover.com/oauth/token?client_id={App ID}&amp;client_secret={App secret}
+&amp;code={Authorization code}
+NOTE
+Since the API token request consists of sensitive information about your app, this request does not have CORS support in the production environment. To successfully request an API token, send this request from your app server to the Clover Server. When the Clover Server responds to the request, retrieve the API token from your app server.</p>
+
+<p>You must set all the parameters as listed in the following table.</p>
+
+<p>Table 3: Parameters in the API token request URL</p>
+
+<p>Parameter   Description
+client_id</p>
+
+<p>This ID uniquely identifies your app on the Clover App Market.</p>
+
+<p>client_secret</p>
+
+<p>This ID is a secret key that is assigned to your app by Clover. The client ID and client secret together authenticate the identity of your app with the Clover Server when you are requesting for an API token.</p>
+
+<p>NOTE
+The client_secret parameter value is the same as the App Secret value in your app’s Settings page. Do not share this key publicly.</p>
+
+<p>code</p>
+
+<p>With this authorization code, the Clover Server confirms that your request for merchant data has been authorized by the merchant. You can use this code to further negotiate with the Clover Server for an API token.</p>
+
+<p>Step 4: Receive an API Token
+In the final step, the Clover Server responds your API token request with a JSON object in the following format:</p>
+
+<p>{
+&quot;access_token&quot;:&quot;{API token}&quot;
+}
+Using the Response Type Token Method
+All your apps on the Clover App Market undergo the 4-step OAuth 2.0 flow to retrieve an API token from the Clover Server. You can also build and publish client-based JavaScript and mobile apps on the Clover App Market. For these client-based apps, Clover provides you with the Response Type Token method to retrieve an API token as soon as the merchant is authorized.</p>
+
+<p>To use the Response Type Token method:</p>
+
+<p>In your app’s Settings &gt; Web Configuration page, set the Default OAuth Response value to Token.
+In the merchant authorization redirect URL (Step 1 of the OAuth 2.0 flow), set the value of the response_type parameter as token.
+The Clover Server directly sends you an API token along with redirecting the authorized merchant to your app using the following URL format:</p>
+
+<p>http://example.com/javascript_app?&amp;merchant_id={Merchant ID}&amp;client_id={App ID}
+&amp;employee_id={Employee ID}#access_token={API token}
+WARNING
+When you use the Response Type Token method, the API token from the Clover Server is publicly accessible. We highly recommend that you use this method only for merchant-facing apps.</p>
+<h1 id='using-api-token'>Using API Token</h1>
+<p>Requests to the REST API require a merchant ID and an API token. The merchant ID is embedded in the URL that’s used to access the Clover merchant website:</p>
+
+<p>https://sandbox.dev.clover.com/home/m/[Merchant ID]</p>
+
+<p>To retrieve the API token, you must use OAuth in the production environment.</p>
+
+<p>NOTE
+Since the API token request consists of sensitive information about your app, this request does not have CORS support in the production environment. To successfully request an API token, send this request from your app server to the Clover Server. When the Clover Server responds to the request, retrieve the API token from your app server.</p>
+
+<p>Once you have retrieved your API token, you can test Clover’s REST APIs in your app client command line. For testing purposes, we at Clover provide CORS support for such client-side requests. In your request, set the value of the access_token query parameter as your API token.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>curl -s https://apisandbox.dev.clover.com/v3/merchants/[Merchant ID]/items?access_token<span class="o">={</span>Your API token<span class="o">}</span> | python -mjson.tool
+</code></pre>
+<p>When you are making server-side requests to Clover’s REST APIs, use set the value of the Authorization header as Bearer {Your API token}. As a test sample, the following cURL command shows the use of the Authorization header.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>curl -s https://apisandbox.dev.clover.com/v3/merchants/[Merchant ID]/orders --header <span class="s2">"Authorization:Bearer {Your API token}"</span> | python -mjson.tool
+</code></pre><h2 id='rate-limit'>Rate Limit</h2>
+<p>We maintain two rate limits on apps to ensure quality of service for both merchants and developers.
+We maintain a rate limit of 16 requests per second for each token.
+Apps also have a cross-token total rate limit of 50 requests per second.</p>
+<h1 id='manipulating-api-requests'>Manipulating API Requests</h1><h2 id='expanding-objects'>Expanding Objects</h2>
+<p>Fields can be expanded with the expand query parameter. You can see what parameters are expandable for a given method in the API Reference.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>curl -s <span class="s2">"https://apisandbox.dev.clover.com/v3/merchants/[Merchant ID]/items/[Item ID]?expand=categories"</span> --header <span class="s2">"Authorization: Bearer {Your API token}"</span> | python -mjson.tool
+
+<span class="o">{</span>
+    <span class="s2">"id"</span>: <span class="s2">"Z0EPYQ2R5TQ5Y"</span>,
+    <span class="s2">"hidden"</span>: <span class="nb">false</span>,
+    <span class="s2">"name"</span>: <span class="s2">"Bangers and Mash"</span>,
+    <span class="s2">"alternateName"</span>: <span class="s2">""</span>,
+    <span class="s2">"code"</span>: <span class="s2">"024463061095"</span>,
+    <span class="s2">"price"</span>: 150,
+    <span class="s2">"priceType"</span>: <span class="s2">"FIXED"</span>,
+    <span class="s2">"defaultTaxRates"</span>: <span class="nb">true</span>,
+    <span class="s2">"unitName"</span>: <span class="s2">""</span>,
+    <span class="s2">"isRevenue"</span>: <span class="nb">true</span>,
+    <span class="s2">"categories"</span>: <span class="o">{</span>
+        <span class="s2">"elements"</span>: <span class="o">[</span>
+            <span class="o">{</span>
+                <span class="s2">"id"</span>: <span class="s2">"MHH9XR2YXZ4T4"</span>,
+                <span class="s2">"name"</span>: <span class="s2">"Food"</span>,
+                <span class="s2">"sortOrder"</span>: <span class="s2">"0"</span>
+            <span class="o">}</span>
+        <span class="o">]</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<p>You can expand multiple fields by separating them with commas.</p>
+
+<p>IMPORTANT
+Please limit expansions to a maximum of three fields per API call. This will allow us to continually provide quick API response times and reduce undue load.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>curl -s <span class="s2">"https://apisandbox.dev.clover.com/v3/merchants/[Merchant ID]/items/[Item ID]?expand=tags%2Ccategories"</span> --header <span class="s2">"Authorization: Bearer {Your API token}"</span> | python -mjson.tool
+
+<span class="o">{</span>
+    <span class="s2">"cost"</span>: 0,
+    <span class="s2">"defaultTaxRates"</span>: <span class="nb">true</span>,
+    <span class="s2">"hidden"</span>: <span class="nb">false</span>,
+    <span class="s2">"id"</span>: <span class="s2">"AK5ESN5YR8YWY"</span>,
+    <span class="s2">"isRevenue"</span>: <span class="nb">true</span>,
+    <span class="s2">"modifiedTime"</span>: 1432671908000,
+    <span class="s2">"name"</span>: <span class="s2">"Pizza"</span>,
+    <span class="s2">"price"</span>: 1499,
+    <span class="s2">"priceType"</span>: <span class="s2">"FIXED"</span>,
+    <span class="s2">"tags"</span>: <span class="o">{</span>
+        <span class="s2">"elements"</span>: <span class="o">[</span>
+            <span class="o">{</span>
+                <span class="s2">"id"</span>: <span class="s2">"HYQ5Z74KS9E6W"</span>,
+                <span class="s2">"name"</span>: <span class="s2">"Hot"</span>
+            <span class="o">}</span>
+        <span class="o">]</span>
+    <span class="o">}</span>,
+    <span class="s2">"categories"</span>: <span class="o">{</span>
+        <span class="s2">"elements"</span>: <span class="o">[</span>
+            <span class="o">{</span>
+                <span class="s2">"id"</span>: <span class="s2">"1JZPWY014VPEP"</span>,
+                <span class="s2">"name"</span>: <span class="s2">"Italian"</span>,
+                <span class="s2">"sortOrder"</span>: 1
+            <span class="o">}</span>,
+            <span class="o">{</span>
+                <span class="s2">"id"</span>: <span class="s2">"0AJNZP04JXB4G"</span>,
+                <span class="s2">"name"</span>: <span class="s2">"From the Oven"</span>,
+                <span class="s2">"sortOrder"</span>: 0
+            <span class="o">}</span>
+        <span class="o">]</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<p>Two levels of fields can be expanded by specifying a dotted field path:</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>curl -s <span class="s2">"https://apisandbox.dev.clover.com/v3/merchants/[Merchant ID]/orders/[Order ID]?expand=lineItems.taxRates"</span> --header <span class="s2">"Authorization: Bearer {Your API token}"</span> | python -mjson.tool
+
+...
+<span class="o">{</span>
+    <span class="s2">"clientCreatedTime"</span>: <span class="s2">"1389389735000"</span>,
+    <span class="s2">"createdTime"</span>: <span class="s2">"1389389736000"</span>,
+    <span class="s2">"employee"</span>: <span class="s2">"id"</span>,
+    <span class="s2">"groupLineItems"</span>: <span class="s2">"true"</span>,
+    <span class="s2">"id"</span>: <span class="s2">"QGSS9P64219CM"</span>,
+    <span class="s2">"lineItems"</span>: <span class="o">{</span>
+        <span class="s2">"elements"</span>: <span class="o">[</span>
+            <span class="o">{</span>
+                <span class="s2">"createdTime"</span>: <span class="s2">"1389389734000"</span>,
+                <span class="s2">"id"</span>: <span class="s2">"VGQRH14DBR7JC"</span>,
+                <span class="s2">"name"</span>: <span class="s2">"Bangers and Mash"</span>,
+                <span class="s2">"price"</span>: <span class="s2">"1000"</span>,
+                <span class="s2">"printed"</span>: <span class="s2">"true"</span>,
+                <span class="s2">"taxRates"</span>: <span class="o">{</span>
+                    <span class="s2">"elements"</span>: <span class="o">[</span>
+                        <span class="o">{</span>
+                            <span class="s2">"id"</span>: <span class="s2">"VSA19B84VG1GT"</span>,
+                            <span class="s2">"isDefault"</span>: <span class="s2">"true"</span>,
+                            <span class="s2">"name"</span>: <span class="s2">"VAT"</span>,
+                            <span class="s2">"rate"</span>: <span class="s2">"1500000"</span>
+                        <span class="o">}</span>,
+                        <span class="o">{</span>
+                            <span class="s2">"id"</span>: <span class="s2">"BTHZCAXV6Z5R8"</span>,
+                            <span class="s2">"isDefault"</span>: <span class="s2">"true"</span>,
+                            <span class="s2">"name"</span>: <span class="s2">"Zero Tax"</span>,
+                            <span class="s2">"rate"</span>: <span class="s2">"0"</span>
+                        <span class="o">}</span>
+                    <span class="o">]</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">]</span>
+    <span class="o">}</span>,
+    <span class="s2">"manualTransaction"</span>: <span class="s2">"false"</span>,
+    <span class="s2">"payType"</span>: <span class="s2">"FULL"</span>,
+    <span class="s2">"state"</span>: <span class="s2">"locked"</span>,
+    <span class="s2">"taxRemoved"</span>: <span class="s2">"false"</span>,
+    <span class="s2">"total"</span>: <span class="s2">"1000"</span>
+<span class="o">}</span>
+...
+</code></pre><h2 id='sorting'>Sorting</h2>
+<p>Most JSON responses take the form of collections, which can be sorted by specifying the orderBy query parameter. You can specify multiple fields by separating them with commas.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>curl -s https://apisandbox.dev.clover.com/v3/merchants/[Merchant ID]/items?orderBy<span class="o">=</span>modifiedTime,price --header <span class="s2">"Authorization: Bearer {Your API token}"</span> | python -mjson.tool
+<span class="o">{</span>
+    <span class="s2">"elements"</span>: <span class="o">[</span>
+        <span class="o">{</span>
+            <span class="s2">"code"</span>: <span class="s2">""</span>,
+            <span class="s2">"defaultTaxRates"</span>: <span class="nb">false</span>,
+            <span class="s2">"hidden"</span>: <span class="nb">false</span>,
+            <span class="s2">"id"</span>: <span class="s2">"V33H8XGTZCKNP"</span>,
+            <span class="s2">"isRevenue"</span>: <span class="nb">true</span>,
+            <span class="s2">"name"</span>: <span class="s2">"Item Use"</span>,
+            <span class="s2">"price"</span>: 100,
+            <span class="s2">"priceType"</span>: <span class="s2">"PER_UNIT"</span>,
+            <span class="s2">"unitName"</span>: <span class="s2">"hr"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"code"</span>: <span class="s2">""</span>,
+            <span class="s2">"defaultTaxRates"</span>: <span class="nb">false</span>,
+            <span class="s2">"hidden"</span>: <span class="nb">false</span>,
+            <span class="s2">"id"</span>: <span class="s2">"EWKZEMNCBQQ9Y"</span>,
+            <span class="s2">"isRevenue"</span>: <span class="nb">true</span>,
+            <span class="s2">"name"</span>: <span class="s2">"Nontax Item"</span>,
+            <span class="s2">"price"</span>: 100,
+            <span class="s2">"priceType"</span>: <span class="s2">"FIXED"</span>,
+            <span class="s2">"unitName"</span>: <span class="s2">"oz"</span>
+        <span class="o">}</span>,
+...
+</code></pre>
+<p>The default sort order is descending by creation time. You can manually order by ascending or descending by inputting %20ASC or %20DESC, respectively.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>curl -s https://apisandbox.dev.clover.com/v3/merchants/[Merchant ID]/items?orderBy<span class="o">=</span>modifiedTime%20ASC --header <span class="s2">"Authorization: Bearer {Your API token}"</span> | python -mjson.tool
+
+<span class="o">{</span>
+  <span class="s2">"elements"</span>: <span class="o">[</span> <span class="o">{</span>
+      <span class="s2">"id"</span>: <span class="s2">"1CF022RN5TGDM"</span>,
+      <span class="s2">"hidden"</span>: <span class="nb">false</span>,
+      <span class="s2">"name"</span>: <span class="s2">"Pizza Slice"</span>,
+      <span class="s2">"price"</span>: 250,
+      <span class="s2">"priceType"</span>: <span class="s2">"FIXED"</span>,
+      <span class="s2">"defaultTaxRates"</span>: <span class="nb">true</span>,
+      <span class="s2">"cost"</span>: 0,
+      <span class="s2">"isRevenue"</span>: <span class="nb">true</span>
+    <span class="o">}</span>, <span class="o">{</span>
+      <span class="s2">"id"</span>: <span class="s2">"SNGFTY41642NY"</span>,
+      <span class="s2">"hidden"</span>: <span class="nb">false</span>,
+      <span class="s2">"name"</span>: <span class="s2">"Pork Rice Bowl with House Salad"</span>,
+      <span class="s2">"price"</span>: 1200,
+      <span class="s2">"priceType"</span>: <span class="s2">"FIXED"</span>,
+      <span class="s2">"defaultTaxRates"</span>: <span class="nb">true</span>,
+      <span class="s2">"cost"</span>: 0,
+      <span class="s2">"isRevenue"</span>: <span class="nb">true</span>,
+      <span class="s2">"stockCount"</span>: 3
+    <span class="o">}</span>,
+...
+</code></pre><h2 id='filtering'>Filtering</h2>
+<p>Collections can be filtered with the filter query parameter. The filter parameter supports standard comparison operations, such as =, &gt;=, and !=. Specify multiple filterparameters by joining &amp;filter= statements.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>curl -s <span class="s2">"https://apisandbox.dev.clover.com/v3/merchants/[Merchant ID]/orders?filter=clientCreatedTime&gt;=[unix-time]&amp;filter=clientCreatedTime&lt;=[unix-time]"</span> --header <span class="s2">"Authorization: Bearer {Your API token}"</span> | python -mjson.tool
+To determine the parameters that can be filtered <span class="k">for </span>a given method, see the API Reference.
+</code></pre><pre class="highlight shell tab-shell"><code><span class="gp">$ </span>curl -s <span class="s2">"https://apisandbox.dev.clover.com/v3/merchants/[Merchant ID]/orders?filter=total&gt;1000&amp;filter=payType!=FULL"</span> --header <span class="s2">"Authorization: Bearer {Your API token}"</span> | python -mjson.tool
+
+<span class="o">{</span>
+    <span class="s2">"elements"</span>: <span class="o">[</span>
+        <span class="o">{</span>
+            <span class="s2">"clientCreatedTime"</span>: 1401286267000,
+            <span class="s2">"createdTime"</span>: 1401286268000,
+            <span class="s2">"currency"</span>: <span class="s2">"USD"</span>,
+            <span class="s2">"employee"</span>: <span class="o">{</span>
+                <span class="s2">"id"</span>: <span class="s2">"QT0DES4CXR572"</span>
+            <span class="o">}</span>,
+            <span class="s2">"groupLineItems"</span>: <span class="nb">true</span>,
+            <span class="s2">"href"</span>: <span class="s2">"https://sandbox.dev.clover.com/v3/merchants/[Merchant ID]/orders/8WAD6KV8D90KR"</span>,
+            <span class="s2">"id"</span>: <span class="s2">"8WAD6KV8D90KR"</span>,
+            <span class="s2">"isVat"</span>: <span class="nb">false</span>,
+            <span class="s2">"manualTransaction"</span>: <span class="nb">false</span>,
+            <span class="s2">"modifiedTime"</span>: 1401286463000,
+            <span class="s2">"payType"</span>: <span class="s2">"SPLIT_CUSTOM"</span>,
+            <span class="s2">"state"</span>: <span class="s2">"locked"</span>,
+            <span class="s2">"taxRemoved"</span>: <span class="nb">false</span>,
+            <span class="s2">"testMode"</span>: <span class="nb">false</span>,
+            <span class="s2">"total"</span>: 5293
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"clientCreatedTime"</span>: 1400106245000,
+            <span class="s2">"createdTime"</span>: 1400106245000,
+            <span class="s2">"currency"</span>: <span class="s2">"USD"</span>,
+            <span class="s2">"employee"</span>: <span class="o">{</span>
+                <span class="s2">"id"</span>: <span class="s2">"QT0DES4CXR572"</span>
+            <span class="o">}</span>,
+            <span class="s2">"groupLineItems"</span>: <span class="nb">true</span>,
+            <span class="s2">"href"</span>: <span class="s2">"https://sandbox.dev.clover.com/v3/merchants/[Merchant ID]/orders/0S0JJYG231462"</span>,
+            <span class="s2">"id"</span>: <span class="s2">"0S0JJYG231462"</span>,
+            <span class="s2">"isVat"</span>: <span class="nb">false</span>,
+            <span class="s2">"manualTransaction"</span>: <span class="nb">false</span>,
+            <span class="s2">"modifiedTime"</span>: 1400106366000,
+            <span class="s2">"payType"</span>: <span class="s2">"SPLIT_CUSTOM"</span>,
+            <span class="s2">"state"</span>: <span class="s2">"locked"</span>,
+            <span class="s2">"taxRemoved"</span>: <span class="nb">false</span>,
+            <span class="s2">"testMode"</span>: <span class="nb">false</span>,
+            <span class="s2">"total"</span>: 2829
+        <span class="o">}</span>
+    <span class="o">]</span>,
+    <span class="s2">"href"</span>: <span class="s2">"https://apisandbox.dev.clover.com/v3/merchants/[Merchant ID]/orders?filter=total%3E1000&amp;filter=payType!%3DFULL&amp;limit=100"</span>
+<span class="o">}</span>
+</code></pre><h2 id='pagination-limit'>Pagination/Limit</h2>
+<p>The offset and limit query parameters can be used to page through larger results. The default limit is 100 elements, and the hard limit is 1000.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>curl -s <span class="s2">"https://apisandbox.dev.clover.com/v3/merchants/[Merchant ID]/orders?offset=10&amp;limit=1"</span> --header <span class="s2">"Authorization: Bearer {Your API token}"</span> | python -mjson.tool
+<span class="o">{</span>
+    <span class="s2">"elements"</span>: <span class="o">[</span>
+        <span class="o">{</span>
+            <span class="s2">"clientCreatedTime"</span>: 1403294602000,
+            <span class="s2">"createdTime"</span>: 1403294602000,
+            <span class="s2">"currency"</span>: <span class="s2">"USD"</span>,
+            <span class="s2">"employee"</span>: <span class="o">{</span>
+                <span class="s2">"id"</span>: <span class="s2">"5PYBJET35969W"</span>
+            <span class="o">}</span>,
+            <span class="s2">"groupLineItems"</span>: <span class="nb">true</span>,
+            <span class="s2">"href"</span>: <span class="s2">"https://sandbox.dev.clover.com/v3/merchants/[Merchant ID]/orders/6Z3JQ98FQ8B40"</span>,
+            <span class="s2">"id"</span>: <span class="s2">"6Z3JQ98FQ8B40"</span>,
+            <span class="s2">"isVat"</span>: <span class="nb">false</span>,
+            <span class="s2">"manualTransaction"</span>: <span class="nb">false</span>,
+            <span class="s2">"modifiedTime"</span>: 1403295698000,
+            <span class="s2">"state"</span>: <span class="s2">"open"</span>,
+            <span class="s2">"taxRemoved"</span>: <span class="nb">false</span>,
+            <span class="s2">"testMode"</span>: <span class="nb">false</span>,
+            <span class="s2">"total"</span>: 1743
+        <span class="o">}</span>
+    <span class="o">]</span>,
+    <span class="s2">"href"</span>: <span class="s2">"https://apisandbox.dev.clover.com/v3/merchants/[Merchant ID]/orders?offset=10&amp;limit=1"</span>
+<span class="o">}</span>
+</code></pre><h2 id='displaying-null-field'>Displaying Null Field</h2>
+<p>To have a response display all possible fields, you can append return_null_fields=true to your query.</p>
+<pre class="highlight shell tab-shell"><code><span class="gp">$ </span>curl -s https://apisandbox.dev.clover.com/v3/merchants/[Merchant ID]/orders/[Order ID]?return_null_fields<span class="o">=</span><span class="nb">true</span>  --header <span class="s2">"Authorization:Bearer {Your API token}"</span> | python -mjson.tool
+
+<span class="o">{</span>
+   <span class="s2">"id"</span>: <span class="s2">"[Order ID]"</span>,
+   <span class="s2">"currency"</span>: <span class="s2">"USD"</span>,
+   <span class="s2">"employee"</span>: <span class="o">{</span>
+      <span class="s2">"id"</span>: <span class="s2">"0YN6A3WJ5BEZJ"</span>
+   <span class="o">}</span>,
+   <span class="s2">"total"</span>: 152,
+   <span class="s2">"title"</span>: <span class="s2">"5"</span>,
+   <span class="s2">"note"</span>: null,
+   <span class="s2">"orderType"</span>: <span class="o">{</span>
+       <span class="s2">"id"</span>: <span class="s2">"2ZPZHQG2Z64NM"</span>,
+       <span class="s2">"labelKey"</span>: null,
+       <span class="s2">"label"</span>: null,
+       <span class="s2">"taxable"</span>: null,
+       <span class="s2">"isDefault"</span>: null,
+       <span class="s2">"isDeleted"</span>: null
+   <span class="o">}</span>,
+   <span class="s2">"taxRemoved"</span>: <span class="nb">false</span>,
+   <span class="s2">"isVat"</span>: <span class="nb">false</span>,
+   <span class="s2">"state"</span>: <span class="s2">"locked"</span>,
+   <span class="s2">"manualTransaction"</span>: <span class="nb">true</span>,
+   <span class="s2">"groupLineItems"</span>: <span class="nb">true</span>,
+   <span class="s2">"testMode"</span>: <span class="nb">false</span>,
+   <span class="s2">"payType"</span>: null,
+   <span class="s2">"createdTime"</span>: 1373613867000,
+   <span class="s2">"clientCreatedTime"</span>: 1373613795000,
+   <span class="s2">"modifiedTime"</span>: 1373613868000,
+   <span class="s2">"serviceCharge"</span>: null
+<span class="o">}</span>
+</code></pre><h1 id='errors'>Errors</h1>
+<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+
+<p>The Kittn API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request sucks.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+<h2 id='429-rate-limit'>429 - Rate Limit</h2>
+<p>Most services provide documentation to understand their rate limiting policies. Let’s take a closer look at an example by examining Clover rate limiting policies. You can find the most up-to-date information on Clover’s Developer Guidelines.</p>
+
+<p>Clover currently has two different rate limits: per token and per app. The more restrictive of the two will apply. For reference, these are the current limits as of January 2017:</p>
+
+<p>16 requests/sec per token
+50 requests/sec across tokens per app
+These same limits apply to all production and sandbox environments. However, other services may have different limits for different environments.</p>
+<h3 id='handling-429-response-codes-by-exponentially-backing-off'>Handling 429 response codes by exponentially backing off</h3>
+<p>If your app’s number of requests has exceeded the rate limits, you may receive a 429 Too Many Request response code. Under certain circumstances rate limits may be reduced, system-wide or for particular tokens. We advise to design your app with the necessary fallbacks to gracefully handle receiving an unexpected 429 response.</p>
+
+<p>After receiving a 429 response, your app should pause for a second from sending additional requests . If you continue to receive 429 responses, your app should then exponentially increase the time between request attempts until you receive a successful response.</p>
+
+<p>Note: If your app is making API requests from multiple threads, you will need to make sure all threads are backing off their requests when receiving 429 responses.
+If you ignore 429 responses and continue sending requests, you risk getting your service severely interrupted.</p>
+<h1 id='api-reference'>API REFERENCE</h1>
+<p>Clover provides endpoints to pull data from merchants.</p>
+<h1 id='orders'>Orders</h1><h2 id='get-all-orders'>Get All Orders</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Clover</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">orders</span><span class="p">.</span><span class="nf">get</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">orders</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/orders"</span>
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">orders</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">orders</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all orders.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET http://example.com/api/orders</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>include_orders</td>
+<td>false</td>
+<td>If set to true, the result will also include orders.</td>
+</tr>
+<tr>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include orders that have already been adopted.</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Remember — a happy order is an authentiordered order!
+</aside>
+<h2 id='get-a-specific-order'>Get a Specific Order</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Clover</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">orders</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">orders</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/orders/2"</span>
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">orders</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific order.</p>
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://example.com/orders/&lt;ID&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the order to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-order'>Delete a Specific Order</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">CloverPOS</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">orders</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">orders</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/orders/2"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">orders</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific order.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE http://example.com/orders/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the order to delete</td>
+</tr>
+</tbody></table>
+<h1 id='payments'>Payments</h1><h2 id='get-all-payments'>Get All Payments</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Clover</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">payments</span><span class="p">.</span><span class="nf">get</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">payments</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/payments"</span>
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">payments</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">payments</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all payments.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET http://example.com/api/payments</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>include_payments</td>
+<td>false</td>
+<td>If set to true, the result will also include payments.</td>
+</tr>
+<tr>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include payments that have already been adopted.</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Remember — a happy payment is an authentipaymented payment!
+</aside>
+<h2 id='get-a-specific-payment'>Get a Specific Payment</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Clover</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">payments</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">payments</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/payments/2"</span>
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">payments</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific payment.</p>
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET http://example.com/payments/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the payment to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-payment'>Delete a Specific Payment</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">CloverPOS</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">payments</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">payments</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/payments/2"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">payments</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific payment.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>DELETE http://example.com/payments/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the payment to delete</td>
+</tr>
+</tbody></table>
+<h1 id='merchants'>Merchants</h1><h2 id='get-all-merchants'>Get All Merchants</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Clover</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">merchants</span><span class="p">.</span><span class="nf">get</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">merchants</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/merchants"</span>
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">merchants</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">merchants</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all merchants.</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>GET http://example.com/api/merchants</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>include_merchants</td>
+<td>false</td>
+<td>If set to true, the result will also include merchants.</td>
+</tr>
+<tr>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include merchants that have already been adopted.</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Remember — a happy merchant is an authentimerchanted merchant!
+</aside>
+<h2 id='get-a-specific-merchant'>Get a Specific Merchant</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Clover</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">merchants</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">merchants</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/merchants/2"</span>
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">merchants</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific merchant.</p>
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>GET http://example.com/merchants/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the merchant to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-merchant'>Delete a Specific Merchant</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">CloverPOS</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">merchants</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">merchants</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/merchants/2"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">merchants</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific merchant.</p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>DELETE http://example.com/merchants/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-6'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the merchant to delete</td>
+</tr>
+</tbody></table>
+<h1 id='inventory'>Inventory</h1><h2 id='get-all-inventories'>Get All Inventories</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Clover</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">inventories</span><span class="p">.</span><span class="nf">get</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">inventories</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/inventories"</span>
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">inventories</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">inventories</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all inventories.</p>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>GET http://example.com/api/inventories</code></p>
+<h3 id='query-parameters-4'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>include_inventories</td>
+<td>false</td>
+<td>If set to true, the result will also include inventories.</td>
+</tr>
+<tr>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include inventories that have already been adopted.</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Remember — a happy inventorie is an authentiinventorieed inventorie!
+</aside>
+<h2 id='get-a-specific-inventory'>Get a Specific Inventory</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Clover</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">inventories</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">inventories</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/inventories/2"</span>
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">inventories</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific inventorie.</p>
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h3 id='http-request-11'>HTTP Request</h3>
+<p><code>GET http://example.com/inventories/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-7'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the inventorie to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-inventory'>Delete a Specific Inventory</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">CloverPOS</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">inventories</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">inventories</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/inventories/2"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">inventories</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific inventorie.</p>
+<h3 id='http-request-12'>HTTP Request</h3>
+<p><code>DELETE http://example.com/inventories/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-8'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the inventorie to delete</td>
+</tr>
+</tbody></table>
+<h1 id='employees'>Employees</h1><h2 id='get-all-employees'>Get All Employees</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Clover</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">employees</span><span class="p">.</span><span class="nf">get</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">employees</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/employees"</span>
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">employees</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">employees</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all employees.</p>
+<h3 id='http-request-13'>HTTP Request</h3>
+<p><code>GET http://example.com/api/employees</code></p>
+<h3 id='query-parameters-5'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>include_employees</td>
+<td>false</td>
+<td>If set to true, the result will also include employees.</td>
+</tr>
+<tr>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include employees that have already been adopted.</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Remember — a happy employee is an authentiemployeeed employee!
+</aside>
+<h2 id='get-a-specific-employee'>Get a Specific Employee</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Clover</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">employees</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">employees</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/employees/2"</span>
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">employees</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific employee.</p>
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h3 id='http-request-14'>HTTP Request</h3>
+<p><code>GET http://example.com/employees/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-9'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the employee to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-employee'>Delete a Specific Employee</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">CloverPOS</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">employees</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">employees</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/employees/2"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">employees</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific employee.</p>
+<h3 id='http-request-15'>HTTP Request</h3>
+<p><code>DELETE http://example.com/employees/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-10'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the employee to delete</td>
+</tr>
+</tbody></table>
+<h1 id='customers'>Customers</h1><h2 id='get-all-customers'>Get All Customers</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Clover</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">customers</span><span class="p">.</span><span class="nf">get</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">customers</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/customers"</span>
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">customers</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">customers</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all customers.</p>
+<h3 id='http-request-16'>HTTP Request</h3>
+<p><code>GET http://example.com/api/customers</code></p>
+<h3 id='query-parameters-6'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>include_customers</td>
+<td>false</td>
+<td>If set to true, the result will also include customers.</td>
+</tr>
+<tr>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include customers that have already been adopted.</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Remember — a happy customer is an authenticustomered customer!
+</aside>
+<h2 id='get-a-specific-customer'>Get a Specific Customer</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Clover</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">customers</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">customers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/customers/2"</span>
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">customers</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific customer.</p>
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h3 id='http-request-17'>HTTP Request</h3>
+<p><code>GET http://example.com/customers/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-11'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the customer to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-customer'>Delete a Specific Customer</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'cloverpos'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">CloverPOS</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">customers</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">cloverpos</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">cloverpos</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'your_access_token'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">customers</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/customers/2"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: your_access_token"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">cloverpos</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'cloverpos'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">cloverpos</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'your_access_token'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">customers</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific customer.</p>
+<h3 id='http-request-18'>HTTP Request</h3>
+<p><code>DELETE http://example.com/customers/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-12'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the customer to delete</td>
+</tr>
+</tbody></table>
+<h1 id='cash'>Cash</h1><h1 id='apps'>Apps</h1><h1 id='notifications'>Notifications</h1>
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="ruby">ruby</a>
+                <a href="#" data-language-name="python">python</a>
+                <a href="#" data-language-name="javascript">javascript</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

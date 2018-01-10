@@ -1,0 +1,2161 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>apisandbox.dev.clover.com</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index2" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}">/V3/MERCHANTS/{MID}</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-get-em-strong" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#strong-em-post-em-strong" class="toc-h2 toc-link" data-title="<strong><em>POST</em></strong>"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-address" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/ADDRESS">/V3/MERCHANTS/{MID}/ADDRESS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-get-em-strong-2" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-default_service_charge" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/DEFAULT_SERVICE_CHARGE">/V3/MERCHANTS/{MID}/DEFAULT_SERVICE_CHARGE</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-get-em-strong-3" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-devices" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/DEVICES">/V3/MERCHANTS/{MID}/DEVICES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-get-em-strong-4" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-devices-deviceid" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/DEVICES/{DEVICEID}">/V3/MERCHANTS/{MID}/DEVICES/{DEVICEID}</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-get-em-strong-5" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-gateway" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/GATEWAY">/V3/MERCHANTS/{MID}/GATEWAY</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-get-em-strong-6" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-opening_hours" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/OPENING_HOURS">/V3/MERCHANTS/{MID}/OPENING_HOURS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-get-em-strong-7" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#strong-em-post-em-strong-2" class="toc-h2 toc-link" data-title="<strong><em>POST</em></strong>"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-opening_hours-hid" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/OPENING_HOURS/{HID}">/V3/MERCHANTS/{MID}/OPENING_HOURS/{HID}</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-delete-em-strong" class="toc-h2 toc-link" data-title="<strong><em>DELETE</em></strong>"><strong><em>DELETE</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#strong-em-get-em-strong-8" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#strong-em-post-em-strong-3" class="toc-h2 toc-link" data-title="<strong><em>POST</em></strong>"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-order_type_categories" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/ORDER_TYPE_CATEGORIES">/V3/MERCHANTS/{MID}/ORDER_TYPE_CATEGORIES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-post-em-strong-4" class="toc-h2 toc-link" data-title="<strong><em>POST</em></strong>"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-order_types" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/ORDER_TYPES">/V3/MERCHANTS/{MID}/ORDER_TYPES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-get-em-strong-9" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#strong-em-post-em-strong-5" class="toc-h2 toc-link" data-title="<strong><em>POST</em></strong>"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-order_types-ordertypeid" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/ORDER_TYPES/{ORDERTYPEID}">/V3/MERCHANTS/{MID}/ORDER_TYPES/{ORDERTYPEID}</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-delete-em-strong-2" class="toc-h2 toc-link" data-title="<strong><em>DELETE</em></strong>"><strong><em>DELETE</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#strong-em-get-em-strong-10" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#strong-em-post-em-strong-6" class="toc-h2 toc-link" data-title="<strong><em>POST</em></strong>"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-properties" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/PROPERTIES">/V3/MERCHANTS/{MID}/PROPERTIES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-get-em-strong-11" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#strong-em-post-em-strong-7" class="toc-h2 toc-link" data-title="<strong><em>POST</em></strong>"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-roles" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/ROLES">/V3/MERCHANTS/{MID}/ROLES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-get-em-strong-12" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#strong-em-post-em-strong-8" class="toc-h2 toc-link" data-title="<strong><em>POST</em></strong>"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-roles-rid" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/ROLES/{RID}">/V3/MERCHANTS/{MID}/ROLES/{RID}</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-delete-em-strong-3" class="toc-h2 toc-link" data-title="<strong><em>DELETE</em></strong>"><strong><em>DELETE</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#strong-em-get-em-strong-13" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#strong-em-post-em-strong-9" class="toc-h2 toc-link" data-title="<strong><em>POST</em></strong>"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-sync-table" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/SYNC/{TABLE}">/V3/MERCHANTS/{MID}/SYNC/{TABLE}</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-get-em-strong-14" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-system_order_types" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/SYSTEM_ORDER_TYPES">/V3/MERCHANTS/{MID}/SYSTEM_ORDER_TYPES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-get-em-strong-15" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-tenders" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/TENDERS">/V3/MERCHANTS/{MID}/TENDERS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-get-em-strong-16" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#strong-em-post-em-strong-10" class="toc-h2 toc-link" data-title="<strong><em>POST</em></strong>"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-tenders-tenderid" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/TENDERS/{TENDERID}">/V3/MERCHANTS/{MID}/TENDERS/{TENDERID}</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-delete-em-strong-4" class="toc-h2 toc-link" data-title="<strong><em>DELETE</em></strong>"><strong><em>DELETE</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#strong-em-get-em-strong-17" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#strong-em-post-em-strong-11" class="toc-h2 toc-link" data-title="<strong><em>POST</em></strong>"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-tip_suggestions" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/TIP_SUGGESTIONS">/V3/MERCHANTS/{MID}/TIP_SUGGESTIONS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-get-em-strong-18" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#v3-merchants-mid-tip_suggestions-tid" class="toc-h1 toc-link" data-title="/V3/MERCHANTS/{MID}/TIP_SUGGESTIONS/{TID}">/V3/MERCHANTS/{MID}/TIP_SUGGESTIONS/{TID}</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#strong-em-get-em-strong-19" class="toc-h2 toc-link" data-title="<strong><em>GET</em></strong>"><strong><em>GET</em></strong></a>
+                  </li>
+                  <li>
+                    <a href="#strong-em-post-em-strong-12" class="toc-h2 toc-link" data-title="<strong><em>POST</em></strong>"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#429-rate-limit" class="toc-h2 toc-link" data-title="429 - Rate Limit">429 - Rate Limit</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/lavkumarv'>Documentation Powered by lav</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p><strong>Version:</strong> 3 </p>
+<h1 id='v3-merchants-mid'>/V3/MERCHANTS/{MID}</h1><h2 id='strong-em-get-em-strong'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get a single merchant</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>expand</td>
+<td>query</td>
+<td>Expandable fields: [employees, bankProcessing, externalMerchant, merchantBoarding, deviceBoarding, programExpress, hierarchy, shifts, orders, address, logos, owner, items, tags, tenders, payments, gateway, printers, modifierGroups, properties, tipSuggestions, openingHours, partnerApp, selfBoardingApplication]</td>
+<td>No</td>
+<td>array</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h2 id='strong-em-post-em-strong'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Update a merchant</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>***POST*** /v3/merchants/{mId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>expand</td>
+<td>query</td>
+<td>Expandable fields: [employees, bankProcessing, externalMerchant, merchantBoarding, deviceBoarding, programExpress, hierarchy, shifts, orders, address, logos, owner, items, tags, tenders, payments, gateway, printers, modifierGroups, properties, tipSuggestions, openingHours, partnerApp, selfBoardingApplication]</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-address'>/V3/MERCHANTS/{MID}/ADDRESS</h1><h2 id='strong-em-get-em-strong-2'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get a merchant&#39;s address</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/address</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-default_service_charge'>/V3/MERCHANTS/{MID}/DEFAULT_SERVICE_CHARGE</h1><h2 id='strong-em-get-em-strong-3'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get default service charge for a merchant</p>
+
+<p><strong>Description:</strong> The Merchant&#39;s default service charge, set via the Setup App (https://www.clover.com/setupapp).</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/default_service_charge</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-devices'>/V3/MERCHANTS/{MID}/DEVICES</h1><h2 id='strong-em-get-em-strong-4'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get all devices provisioned to a merchant</p>
+
+<p><strong>Description:</strong> Returns a list of all devices that are provisioned to the a merchant. This list can be viewed from the Setup App on the merchant&#39;s device or web dashboard (https://www.clover.com/setupapp/m/{mId}/devices).</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/devices</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>query</td>
+<td>Filter fields: [id, model, name, orderPrefix, serial, deleted_time, merchant.id, merchant.name, deviceTypeName]</td>
+<td>No</td>
+<td>array</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-devices-deviceid'>/V3/MERCHANTS/{MID}/DEVICES/{DEVICEID}</h1><h2 id='strong-em-get-em-strong-5'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get a single device provisioned to a merchant</p>
+
+<p><strong>Description:</strong> Returns a single device that is provisioned to a merchant.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/devices/{deviceId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>deviceId</td>
+<td>path</td>
+<td>Device Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-gateway'>/V3/MERCHANTS/{MID}/GATEWAY</h1><h2 id='strong-em-get-em-strong-6'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get a merchant&#39;s payment gateway configuration</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/gateway</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-opening_hours'>/V3/MERCHANTS/{MID}/OPENING_HOURS</h1><h2 id='strong-em-get-em-strong-7'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get a list this merchant opening hours</p>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/opening_hours</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h2 id='strong-em-post-em-strong-2'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Create a set of merchant opening hours</p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>***POST*** /v3/merchants/{mId}/opening_hours</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-opening_hours-hid'>/V3/MERCHANTS/{MID}/OPENING_HOURS/{HID}</h1><h2 id='strong-em-delete-em-strong'><strong><em>DELETE</em></strong></h2>
+<p><strong>Summary:</strong> Delete a set of merchant opening hours</p>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>***DELETE*** /v3/merchants/{mId}/opening_hours/{hId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>hId</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h2 id='strong-em-get-em-strong-8'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get a specific set of merchant opening hours</p>
+<h3 id='http-request-11'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/opening_hours/{hId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>hId</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h2 id='strong-em-post-em-strong-3'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Update a set of merchant opening hours</p>
+<h3 id='http-request-12'>HTTP Request</h3>
+<p><code>***POST*** /v3/merchants/{mId}/opening_hours/{hId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>hId</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-order_type_categories'>/V3/MERCHANTS/{MID}/ORDER_TYPE_CATEGORIES</h1><h2 id='strong-em-post-em-strong-4'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Create or delete a order type category</p>
+<h3 id='http-request-13'>HTTP Request</h3>
+<p><code>***POST*** /v3/merchants/{mId}/order_type_categories</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-order_types'>/V3/MERCHANTS/{MID}/ORDER_TYPES</h1><h2 id='strong-em-get-em-strong-9'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get all order types for a merchant</p>
+
+<p><strong>Description:</strong> Merchants have the ability to create custom order types via the Setup App (https://www.clover.com/setupapp). These custom order types can be associated with a System Order Type (see /v3/merchants/{mId}/system_order_types). Custom Order Types can support items in all categories (filterCategories=false) or a subset of the merchant&#39;s categories (filterCategories=true and categories property contains the list of supported categories). Note that when expanding the categories for an order type, they will only be returned if this orderType only supports a subset of the categories (filterCategories=true). If the orderType supports all categories (filterCategories=false) then you should make a GET request to /v3/merchants/{mId}/categories.</p>
+<h3 id='http-request-14'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/order_types</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>query</td>
+<td>Filter fields: [id, deletedTime]</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>expand</td>
+<td>query</td>
+<td>Expandable fields: [hours, attributes, categories]</td>
+<td>No</td>
+<td>array</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h2 id='strong-em-post-em-strong-5'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Create Order Type For Merchant</p>
+<h3 id='http-request-15'>HTTP Request</h3>
+<p><code>***POST*** /v3/merchants/{mId}/order_types</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>expand</td>
+<td>query</td>
+<td>Expandable fields: [hours, attributes, categories]</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-order_types-ordertypeid'>/V3/MERCHANTS/{MID}/ORDER_TYPES/{ORDERTYPEID}</h1><h2 id='strong-em-delete-em-strong-2'><strong><em>DELETE</em></strong></h2>
+<p><strong>Summary:</strong> Delete an order type</p>
+<h3 id='http-request-16'>HTTP Request</h3>
+<p><code>***DELETE*** /v3/merchants/{mId}/order_types/{orderTypeId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>orderTypeId</td>
+<td>path</td>
+<td>Order Type Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h2 id='strong-em-get-em-strong-10'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get a single order type</p>
+<h3 id='http-request-17'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/order_types/{orderTypeId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>orderTypeId</td>
+<td>path</td>
+<td>Order Type Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>expand</td>
+<td>query</td>
+<td>Expandable fields: [hours, attributes, categories]</td>
+<td>No</td>
+<td>array</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h2 id='strong-em-post-em-strong-6'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Update a single order type</p>
+<h3 id='http-request-18'>HTTP Request</h3>
+<p><code>***POST*** /v3/merchants/{mId}/order_types/{orderTypeId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>orderTypeId</td>
+<td>path</td>
+<td>Order Type Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>expand</td>
+<td>query</td>
+<td>Expandable fields: [hours, attributes, categories]</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-properties'>/V3/MERCHANTS/{MID}/PROPERTIES</h1><h2 id='strong-em-get-em-strong-11'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get a merchant&#39;s properties</p>
+<h3 id='http-request-19'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/properties</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h2 id='strong-em-post-em-strong-7'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Update merchant properties</p>
+<h3 id='http-request-20'>HTTP Request</h3>
+<p><code>***POST*** /v3/merchants/{mId}/properties</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-roles'>/V3/MERCHANTS/{MID}/ROLES</h1><h2 id='strong-em-get-em-strong-12'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get all roles from a merchant</p>
+<h3 id='http-request-21'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/roles</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>query</td>
+<td>Filter fields: [modifiedTime, systemRole, name, id, deletedTime]</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>expand</td>
+<td>query</td>
+<td>Expandable fields: [employees]</td>
+<td>No</td>
+<td>array</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h2 id='strong-em-post-em-strong-8'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Create a role</p>
+<h3 id='http-request-22'>HTTP Request</h3>
+<p><code>***POST*** /v3/merchants/{mId}/roles</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-roles-rid'>/V3/MERCHANTS/{MID}/ROLES/{RID}</h1><h2 id='strong-em-delete-em-strong-3'><strong><em>DELETE</em></strong></h2>
+<p><strong>Summary:</strong> Delete a role</p>
+<h3 id='http-request-23'>HTTP Request</h3>
+<p><code>***DELETE*** /v3/merchants/{mId}/roles/{rId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>rId</td>
+<td>path</td>
+<td>Role Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h2 id='strong-em-get-em-strong-13'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get a single role</p>
+<h3 id='http-request-24'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/roles/{rId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>rId</td>
+<td>path</td>
+<td>Role Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>expand</td>
+<td>query</td>
+<td>Expandable fields: [employees]</td>
+<td>No</td>
+<td>array</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h2 id='strong-em-post-em-strong-9'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Update a single role</p>
+<h3 id='http-request-25'>HTTP Request</h3>
+<p><code>***POST*** /v3/merchants/{mId}/roles/{rId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>rId</td>
+<td>path</td>
+<td>Role Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>expand</td>
+<td>query</td>
+<td>Expandable fields: [employees]</td>
+<td>No</td>
+<td>array</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-sync-table'>/V3/MERCHANTS/{MID}/SYNC/{TABLE}</h1><h2 id='strong-em-get-em-strong-14'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get a sync token (deprecated)</p>
+<h3 id='http-request-26'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/sync/{table}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>table</td>
+<td>path</td>
+<td>Table Name</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-system_order_types'>/V3/MERCHANTS/{MID}/SYSTEM_ORDER_TYPES</h1><h2 id='strong-em-get-em-strong-15'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Return a list of system order types</p>
+
+<p><strong>Description:</strong> Merchants can create custom Order Types via &quot;/v3/merchants/{mId}/order_types&quot;. It is useful to associate these custom order types with particular system order types in order to group things functionally. For example, a merchant may have a &quot;Lunch Take-Out&quot; order type and a &quot;Dinner Take-Out&quot; order type. These two order types can be associated with the &quot;TAKE-OUT-TYPE&quot; system order type so that applications can understand that they are both take-out order types.</p>
+<h3 id='http-request-27'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/system_order_types</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-tenders'>/V3/MERCHANTS/{MID}/TENDERS</h1><h2 id='strong-em-get-em-strong-16'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get all tenders for a merchant</p>
+<h3 id='http-request-28'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/tenders</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>query</td>
+<td>Filter fields: [labelKey, label, opensCashDrawer, enabled, visible, instruction, id, merchantId, systemTenderId, deletedTime, modifiedTime]</td>
+<td>No</td>
+<td>array</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h2 id='strong-em-post-em-strong-10'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Adds a new tender</p>
+
+<p><strong>Description:</strong> Returns an object representing newly added merchant tender, with a generated ID.</p>
+<h3 id='http-request-29'>HTTP Request</h3>
+<p><code>***POST*** /v3/merchants/{mId}/tenders</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-tenders-tenderid'>/V3/MERCHANTS/{MID}/TENDERS/{TENDERID}</h1><h2 id='strong-em-delete-em-strong-4'><strong><em>DELETE</em></strong></h2>
+<p><strong>Summary:</strong> Deletes an existing tender</p>
+<h3 id='http-request-30'>HTTP Request</h3>
+<p><code>***DELETE*** /v3/merchants/{mId}/tenders/{tenderId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>tenderId</td>
+<td>path</td>
+<td>Tender Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h2 id='strong-em-get-em-strong-17'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get a single merchant tender</p>
+<h3 id='http-request-31'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/tenders/{tenderId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>tenderId</td>
+<td>path</td>
+<td>Tender Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h2 id='strong-em-post-em-strong-11'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Updates an existing tender</p>
+
+<p><strong>Description:</strong> Returns an object representing updated merchant tender.</p>
+<h3 id='http-request-32'>HTTP Request</h3>
+<p><code>***POST*** /v3/merchants/{mId}/tenders/{tenderId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>tenderId</td>
+<td>path</td>
+<td>Tender Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-tip_suggestions'>/V3/MERCHANTS/{MID}/TIP_SUGGESTIONS</h1><h2 id='strong-em-get-em-strong-18'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get all tip suggestions for a merchant</p>
+<h3 id='http-request-33'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/tip_suggestions</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>query</td>
+<td>Filter fields: [id, name, percentage, enabled]</td>
+<td>No</td>
+<td>array</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h1 id='v3-merchants-mid-tip_suggestions-tid'>/V3/MERCHANTS/{MID}/TIP_SUGGESTIONS/{TID}</h1><h2 id='strong-em-get-em-strong-19'><strong><em>GET</em></strong></h2>
+<p><strong>Summary:</strong> Get a single tip suggestion</p>
+<h3 id='http-request-34'>HTTP Request</h3>
+<p><code>***GET*** /v3/merchants/{mId}/tip_suggestions/{tId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>tId</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+<h2 id='strong-em-post-em-strong-12'><strong><em>POST</em></strong></h2>
+<p><strong>Summary:</strong> Update a single tip suggestion</p>
+<h3 id='http-request-35'>HTTP Request</h3>
+<p><code>***POST*** /v3/merchants/{mId}/tip_suggestions/{tId}</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mId</td>
+<td>path</td>
+<td>Merchant Id</td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>tId</td>
+<td>path</td>
+<td></td>
+<td>Yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>No response was specified</td>
+</tr>
+</tbody></table>
+
+<!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->
+<h1 id='errors'>Errors</h1>
+<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+
+<p>The Kittn API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request sucks.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+<h2 id='429-rate-limit'>429 - Rate Limit</h2>
+<p>Most services provide documentation to understand their rate limiting policies. Let’s take a closer look at an example by examining Clover rate limiting policies. You can find the most up-to-date information on Clover’s Developer Guidelines.</p>
+
+<p>Clover currently has two different rate limits: per token and per app. The more restrictive of the two will apply. For reference, these are the current limits as of January 2017:</p>
+
+<p>16 requests/sec per token
+50 requests/sec across tokens per app
+These same limits apply to all production and sandbox environments. However, other services may have different limits for different environments.</p>
+<h3 id='handling-429-response-codes-by-exponentially-backing-off'>Handling 429 response codes by exponentially backing off</h3>
+<p>If your app’s number of requests has exceeded the rate limits, you may receive a 429 Too Many Request response code. Under certain circumstances rate limits may be reduced, system-wide or for particular tokens. We advise to design your app with the necessary fallbacks to gracefully handle receiving an unexpected 429 response.</p>
+
+<p>After receiving a 429 response, your app should pause for a second from sending additional requests . If you continue to receive 429 responses, your app should then exponentially increase the time between request attempts until you receive a successful response.</p>
+
+<p>Note: If your app is making API requests from multiple threads, you will need to make sure all threads are backing off their requests when receiving 429 responses.
+If you ignore 429 responses and continue sending requests, you risk getting your service severely interrupted.</p>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
